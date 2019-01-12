@@ -119,13 +119,23 @@ RSpec.describe Game, type: :model do
     end
   end
 
-  # Метод previous_level возвращает число, равное предыдущему уровню сложности
-  context '#previous_level' do
+  # ДЗ 61-6 тест на возврат текущего вопроса и предыдущего уровня
+  context '.current_game_question' do
     let(:game_w_questions) do
       FactoryBot.create :game_with_questions
     end
 
-    it 'return number of past level' do
+    it 'returns current game question' do
+      expect(game_w_questions.current_game_question).to eq game_w_questions.game_questions[0]
+    end
+  end
+
+  context '.previous_level' do
+    let(:game_w_questions) do
+      FactoryBot.create :game_with_questions
+    end
+
+    it 'returns number of past level' do
       expect(game_w_questions.previous_level).to eq game_w_questions.current_level - 1
     end
   end
