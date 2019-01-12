@@ -132,6 +132,7 @@ RSpec.describe Game, type: :model do
     end
   end
 
+  # ДЗ 61-7
   # когда ответ правильный, неправильный, последний (на миллион) и когда ответ дан после истечения времени.
   context '.answer_current_question!' do
     context 'correct answer' do
