@@ -156,7 +156,7 @@ RSpec.describe Game, type: :model do
 
     context 'wrong answer' do
       let(:q) { game_w_questions.current_game_question }
-      let(:wrong_answer_key) { %w(a b c d).delete_if{ |i| i == q.correct_answer_key }.sample }
+      let(:wrong_answer_key) { %w(a b c d).delete_if { |i| i == q.correct_answer_key }.sample }
 
       it 'returns false if answer is wrong' do
         expect(game_w_questions.answer_current_question!(wrong_answer_key)).to be_falsey
@@ -179,6 +179,18 @@ RSpec.describe Game, type: :model do
         expect(game_w_questions.current_level).to eq 15
         expect(game_w_questions.is_failed).to be_falsey
         expect(game_w_questions.status).to eq :won
+      end
+    end
+
+    context 'when time is out' do
+      let(:q) { game_w_questions.current_game_question }
+
+      it 'sets game status to :timeout' do
+        game_w_questions.created_at = 1.hour.ago
+        game_w_questions.answer_current_question!(q.correct_answer_key)
+
+        expect(game_w_questions.is_failed).to be_truthy
+        expect(game_w_questions.status).to eq :timeout
       end
     end
   end

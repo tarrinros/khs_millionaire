@@ -18,6 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/khs_millionaire@IRB_console__khs_millionaire.rcov" NAME="IRB console: khs_millionaire Coverage Results" MODIFIED="1547333650115" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="khs_millionaire" />
     <SUITE FILE_PATH="coverage/khs_millionaire@Run_spec__game_question_spec___khs_millionaire.rcov" NAME="Run spec 'game_question_spec': khs_millionaire Coverage Results" MODIFIED="1547232484053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="khs_millionaire" />
     <SUITE FILE_PATH="coverage/khs_millionaire@Game_game_mechanics_take_money__finishes_the_game__khs_millionaire.rcov" NAME="Game game mechanics take_money! finishes the game: khs_millionaire Coverage Results" MODIFIED="1547288504641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="khs_millionaire" />
     <SUITE FILE_PATH="coverage/khs_millionaire@Game_current_game_question__khs_millionaire.rcov" NAME="Game.current_game_question: khs_millionaire Coverage Results" MODIFIED="1547319552311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="khs_millionaire" />
@@ -29,8 +30,9 @@
     <SUITE FILE_PATH="coverage/khs_millionaire@GameQuestion_game_status_correct__correct_answer_key__khs_millionaire.rcov" NAME="GameQuestion game status correct .correct_answer_key: khs_millionaire Coverage Results" MODIFIED="1547312753262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="khs_millionaire" />
     <SUITE FILE_PATH="coverage/khs_millionaire@Game_game_mechanics__khs_millionaire.rcov" NAME="Game game mechanics: khs_millionaire Coverage Results" MODIFIED="1547233121649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="khs_millionaire" />
     <SUITE FILE_PATH="coverage/khs_millionaire@Game_previous_level__khs_millionaire.rcov" NAME="Game.previous_level: khs_millionaire Coverage Results" MODIFIED="1547319379689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="khs_millionaire" />
+    <SUITE FILE_PATH="coverage/khs_millionaire@Game_answer_current_question__the_last_question__khs_millionaire.rcov" NAME="Game.answer_current_question! the last question: khs_millionaire Coverage Results" MODIFIED="1547334567874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="khs_millionaire" />
     <SUITE FILE_PATH="coverage/khs_millionaire@Game_status__khs_millionaire.rcov" NAME="Game.status: khs_millionaire Coverage Results" MODIFIED="1547302815282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="khs_millionaire" />
-    <SUITE FILE_PATH="coverage/khs_millionaire@Game_answer_current_question__wrong_answer__khs_millionaire.rcov" NAME="Game.answer_current_question! wrong answer: khs_millionaire Coverage Results" MODIFIED="1547333527876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="khs_millionaire" />
+    <SUITE FILE_PATH="coverage/khs_millionaire@Game_answer_current_question__wrong_answer__khs_millionaire.rcov" NAME="Game.answer_current_question! wrong answer: khs_millionaire Coverage Results" MODIFIED="1547334026399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="khs_millionaire" />
     <SUITE FILE_PATH="coverage/khs_millionaire@GameQuestion_game_status_correct__variants__khs_millionaire.rcov" NAME="GameQuestion game status correct .variants: khs_millionaire Coverage Results" MODIFIED="1547231974891" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="khs_millionaire" />
     <SUITE FILE_PATH="coverage/khs_millionaire@GameQuestion_game_status_equal__text__khs_millionaire.rcov" NAME="GameQuestion game status equal .text: khs_millionaire Coverage Results" MODIFIED="1547285915472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="khs_millionaire" />
   </component>
@@ -75,8 +77,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/models/game_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="168" column="51" selection-start-line="168" selection-start-column="51" selection-end-line="168" selection-end-column="51" />
+            <state relative-caret-position="536">
+              <caret line="191" column="55" selection-start-line="191" selection-start-column="55" selection-end-line="191" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -206,7 +208,60 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="RSpec.Game.answer_current_question! wrong answer: khs_millionaire">
+  <component name="RunManager" selected="RSpec.Game.answer_current_question! the last question: khs_millionaire">
+    <configuration name="IRB console: khs_millionaire" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
+      <module name="khs_millionaire" />
+      <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
+      <IRB_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <IRB_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <IRB_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <IRB_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$APPLICATION_HOME_DIR$/rb/testing/runner/irb.rb" />
+      <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="--prompt simple" />
+      <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Game.answer_current_question! the last question: khs_millionaire" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+      <module name="khs_millionaire" />
+      <predefined_log_file enabled="true" id="RUBY_RSPEC" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/models/game_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="'**/*_spec.rb'" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="Game.answer_current_question! the last question" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method v="2" />
+    </configuration>
     <configuration name="Game.answer_current_question! wrong answer: khs_millionaire" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <module name="khs_millionaire" />
       <predefined_log_file enabled="true" id="RUBY_RSPEC" />
@@ -275,40 +330,6 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Game.current_game_question: khs_millionaire" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
-      <module name="khs_millionaire" />
-      <predefined_log_file enabled="true" id="RUBY_RSPEC" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="test" />
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/models/game_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="'**/*_spec.rb'" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="Game.current_game_question" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <method v="2" />
-    </configuration>
     <configuration name="Game.status :timeout: khs_millionaire" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <module name="khs_millionaire" />
       <predefined_log_file enabled="true" id="RUBY_RSPEC" />
@@ -333,40 +354,6 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="'**/*_spec.rb'" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="Game.status :timeout" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Run spec 'game_spec': khs_millionaire" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
-      <module name="khs_millionaire" />
-      <predefined_log_file enabled="true" id="RUBY_RSPEC" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="test" />
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$MODULE_DIR$/spec/models/game_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="'**/*_spec.rb'" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
@@ -474,11 +461,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="RSpec.Game.answer_current_question! the last question: khs_millionaire" />
         <item itemvalue="RSpec.Game.answer_current_question! wrong answer: khs_millionaire" />
+        <item itemvalue="IRB console.IRB console: khs_millionaire" />
         <item itemvalue="RSpec.Game.answer_current_question!: khs_millionaire" />
         <item itemvalue="RSpec.Game.status :timeout: khs_millionaire" />
-        <item itemvalue="RSpec.Run spec 'game_spec': khs_millionaire" />
-        <item itemvalue="RSpec.Game.current_game_question: khs_millionaire" />
       </list>
     </recent_temporary>
   </component>
@@ -495,44 +482,44 @@
       <updated>1547127304327</updated>
       <workItem from="1547127305839" duration="1842000" />
       <workItem from="1547214733630" duration="10898000" />
-      <workItem from="1547284890827" duration="18448000" />
+      <workItem from="1547284890827" duration="19717000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Game_answer_current_question!__khs_millionaire - 2019.01.13 at 00h 32m 56s.xml">
-      <configuration name="Game.answer_current_question!: khs_millionaire" configurationId="RSpecRunConfigurationType" />
-    </history-entry>
-    <history-entry file="Game_answer_current_question!_wrong_answer__khs_millionaire - 2019.01.13 at 00h 38m 31s.xml">
+    <history-entry file="Game_answer_current_question!_wrong_answer__khs_millionaire - 2019.01.13 at 00h 52m 42s.xml">
       <configuration name="Game.answer_current_question! wrong answer: khs_millionaire" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Game_answer_current_question!_wrong_answer__khs_millionaire - 2019.01.13 at 00h 39m 07s.xml">
+    <history-entry file="Game_answer_current_question!_wrong_answer__khs_millionaire - 2019.01.13 at 00h 53m 37s.xml">
       <configuration name="Game.answer_current_question! wrong answer: khs_millionaire" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Game_answer_current_question!_wrong_answer__khs_millionaire - 2019.01.13 at 00h 40m 48s.xml">
+    <history-entry file="Game_answer_current_question!_wrong_answer__khs_millionaire - 2019.01.13 at 01h 00m 05s.xml">
       <configuration name="Game.answer_current_question! wrong answer: khs_millionaire" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Game_answer_current_question!_wrong_answer__khs_millionaire - 2019.01.13 at 00h 43m 40s.xml">
+    <history-entry file="Game_answer_current_question!_wrong_answer__khs_millionaire - 2019.01.13 at 01h 00m 39s.xml">
       <configuration name="Game.answer_current_question! wrong answer: khs_millionaire" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Game_answer_current_question!_wrong_answer__khs_millionaire - 2019.01.13 at 00h 48m 17s.xml">
-      <configuration name="Game.answer_current_question! wrong answer: khs_millionaire" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="Game_answer_current_question!_the_last_question__khs_millionaire - 2019.01.13 at 01h 05m 05s.xml">
+      <configuration name="Game.answer_current_question! the last question: khs_millionaire" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Game_answer_current_question!_wrong_answer__khs_millionaire - 2019.01.13 at 00h 48m 44s.xml">
-      <configuration name="Game.answer_current_question! wrong answer: khs_millionaire" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="Game_answer_current_question!_the_last_question__khs_millionaire - 2019.01.13 at 01h 06m 02s.xml">
+      <configuration name="Game.answer_current_question! the last question: khs_millionaire" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Game_answer_current_question!_wrong_answer__khs_millionaire - 2019.01.13 at 00h 49m 18s.xml">
-      <configuration name="Game.answer_current_question! wrong answer: khs_millionaire" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="Game_answer_current_question!_the_last_question__khs_millionaire - 2019.01.13 at 01h 06m 28s.xml">
+      <configuration name="Game.answer_current_question! the last question: khs_millionaire" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Game_answer_current_question!_wrong_answer__khs_millionaire - 2019.01.13 at 00h 50m 02s.xml">
-      <configuration name="Game.answer_current_question! wrong answer: khs_millionaire" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="Game_answer_current_question!_the_last_question__khs_millionaire - 2019.01.13 at 01h 08m 14s.xml">
+      <configuration name="Game.answer_current_question! the last question: khs_millionaire" configurationId="RSpecRunConfigurationType" />
     </history-entry>
-    <history-entry file="Game_answer_current_question!_wrong_answer__khs_millionaire - 2019.01.13 at 00h 52m 20s.xml">
-      <configuration name="Game.answer_current_question! wrong answer: khs_millionaire" configurationId="RSpecRunConfigurationType" />
+    <history-entry file="Game_answer_current_question!_the_last_question__khs_millionaire - 2019.01.13 at 01h 09m 21s.xml">
+      <configuration name="Game.answer_current_question! the last question: khs_millionaire" configurationId="RSpecRunConfigurationType" />
+    </history-entry>
+    <history-entry file="Game_answer_current_question!_the_last_question__khs_millionaire - 2019.01.13 at 01h 09m 40s.xml">
+      <configuration name="Game.answer_current_question! the last question: khs_millionaire" configurationId="RSpecRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31188000" />
+    <option name="totallyTimeSpent" value="32457000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="2497" height="1322" extended-state="6" />
@@ -542,9 +529,9 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="1" />
-      <window_info anchor="bottom" id="Version Control" order="2" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.32960412" />
+      <window_info anchor="bottom" id="Database Changes" order="1" weight="0.32960412" />
+      <window_info anchor="bottom" id="Version Control" order="2" weight="0.32960412" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32960412" />
       <window_info anchor="bottom" id="Messages" order="4" weight="0.3298969" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="6" />
@@ -553,7 +540,7 @@
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.33046472" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.33046472" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -649,17 +636,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/factories/games.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20160610125247_create_games.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+        <state relative-caret-position="209">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/game_question.rb">
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.5.1/gems/rspec-core-3.8.0/lib/rspec/core/example_group.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="59" column="6" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
+        <state relative-caret-position="364">
+          <caret line="745" column="45" selection-start-line="745" selection-start-column="45" selection-end-line="745" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -670,10 +657,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20160610125247_create_games.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/game_question.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="442">
+          <caret line="59" column="6" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -684,10 +671,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/spec/factories/games.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/spec/models/game_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="168" column="51" selection-start-line="168" selection-start-column="51" selection-end-line="168" selection-end-column="51" />
+        <state relative-caret-position="536">
+          <caret line="191" column="55" selection-start-line="191" selection-start-column="55" selection-end-line="191" selection-end-column="55" />
         </state>
       </provider>
     </entry>
