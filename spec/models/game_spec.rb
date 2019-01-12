@@ -69,6 +69,21 @@ RSpec.describe Game, type: :model do
       expect(game_w_questions.status).to eq(:in_progress)
       expect(game_w_questions.finished?).to be_falsey
     end
+
+    # ДЗ 61-3
+    it 'take_money! finishes the game' do
+      q = game_w_questions.current_game_question
+      game_w_questions.answer_current_question!(q.correct_answer_key)
+
+      game_w_questions.take_money!
+
+      # Проверяет,совпадает ли баланс игрока с призом
+      expect(user.balance).to eq game_w_questions.prize
+
+      # Проверяет записался ли в статус игры - игрок забрал деньги
+      expect(game_w_questions.status).to eq :money
+      expect(game_w_questions.finished?).to be_truthy
+    end
   end
 
   # Метод previous_level возвращает число, равное предыдущему уровню сложности
