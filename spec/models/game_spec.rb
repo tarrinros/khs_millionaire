@@ -71,36 +71,6 @@ RSpec.describe Game, type: :model do
     end
   end
 
-  #Задание 61-3
-  it 'take_money! finishes the game' do
-    # берем игру и отвечаем на текущий вопрос
-    q = game_w_questions.current_game_question
-    game_w_questions.answer_current_question!(q.correct_answer_key)
-
-    # взяли деньги
-    game_w_questions.take_money!
-
-    prize = game_w_questions.prize
-    expect(prize).to be > 0
-
-    # проверяем что закончилась игра и пришли деньги игроку
-    expect(game_w_questions.status).to eq :money
-    expect(game_w_questions.finished?).to be_truthy
-    expect(user.balance).to eq prize
-  end
-
-  # Задание 61-6
-  # Метод current_game_question возвращает текущий, еще неотвеченный вопрос игры
-  context '#current_game_question' do
-    let(:game_w_questions) do
-      FactoryBot.create :game_with_questions
-    end
-
-    it 'check current question' do
-      expect(game_w_questions.current_game_question).to eq game_w_questions.game_questions[0]
-    end
-  end
-
   # Метод previous_level возвращает число, равное предыдущему уровню сложности
   context '#previous_level' do
     let(:game_w_questions) do
