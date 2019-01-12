@@ -135,20 +135,50 @@ RSpec.describe Game, type: :model do
   # когда ответ правильный, неправильный, последний (на миллион) и когда ответ дан после истечения времени.
   context '.answer_current_question!' do
     context 'correct answer' do
-      let(:current_question) { game_w_questions.current_game_question }
+      let(:q) { game_w_questions.current_game_question }
 
       it 'returns true if answer is correct' do
-        expect(game_w_questions.answer_current_question!(current_question.correct_answer_key)).to be_truthy
+        expect(game_w_questions.answer_current_question!(q.correct_answer_key)).to be_truthy
       end
 
       it 'saves game status to :in_progress' do
+        game_w_questions.answer_current_question!(q.correct_answer_key)
+
         expect(game_w_questions.status).to eq :in_progress
       end
 
-      it 'increases game level for 1' do
+      it 'increases game level by 1' do
         expect {
-          game_w_questions.answer_current_question!(current_question.correct_answer_key)
+          game_w_questions.answer_current_question!(q.correct_answer_key)
         }.to change(game_w_questions, :current_level).by(1)
+      end
+    end
+
+    context 'wrong answer' do
+      let(:q) { game_w_questions.current_game_question }
+      let(:wrong_answer_key) { %w(a b c d).delete_if{ |i| i == q.correct_answer_key }.sample }
+
+      it 'returns false if answer is wrong' do
+        expect(game_w_questions.answer_current_question!(wrong_answer_key)).to be_falsey
+      end
+
+      it 'saves game status to :fail' do
+        game_w_questions.answer_current_question!(wrong_answer_key)
+
+        expect(game_w_questions.status).to eq :fail
+      end
+    end
+
+    context 'the last question' do
+      let(:q) { game_w_questions.current_game_question }
+
+      it 'save game status to :won and finish the game' do
+        game_w_questions.current_level = 14
+        game_w_questions.answer_current_question!(q.correct_answer_key)
+
+        expect(game_w_questions.current_level).to eq 15
+        expect(game_w_questions.is_failed).to be_falsey
+        expect(game_w_questions.status).to eq :won
       end
     end
   end
