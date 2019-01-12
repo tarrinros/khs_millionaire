@@ -23,13 +23,18 @@ RSpec.describe GameQuestion, type: :model do
       expect(game_question.answer_correct?('b')).to be_truthy
     end
 
-    # ДЗ 61-2 тест на правильную делегацию метода .text и .level
+    # ДЗ 61-2 тест на правильное делегирование метода .text и .level
     it 'correct .text' do
       expect(game_question.text).to eq game_question.question.text
     end
 
     it 'correct .level' do
       expect(game_question.level).to eq game_question.question.level
+    end
+
+    # ДЗ 61-5
+    it 'correct .correct_answer_key' do
+      expect(game_question.correct_answer_key).to eq 'b'
     end
   end
 end

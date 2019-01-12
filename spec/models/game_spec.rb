@@ -86,6 +86,39 @@ RSpec.describe Game, type: :model do
     end
   end
 
+  # ДЗ 61-4 проверка для статуса игры
+  context '.status' do
+    # Для каждого статуса заканчивает игру
+    before(:each) do
+      game_w_questions.finished_at = Time.now
+      expect(game_w_questions.finished?).to be_truthy
+    end
+
+    # Выигрыш
+    it ':won' do
+      game_w_questions.current_level = Question::QUESTION_LEVELS.max + 1
+      expect(game_w_questions.status).to eq(:won)
+    end
+
+    # Проигрыш
+    it ':fail' do
+      game_w_questions.is_failed = true
+      expect(game_w_questions.status).to eq(:fail)
+    end
+
+    # Вышло время
+    it ':timeout' do
+      game_w_questions.created_at = 1.hour.ago
+      game_w_questions.is_failed = true
+      expect(game_w_questions.status).to eq(:timeout)
+    end
+
+    # Игрок забрал деньги
+    it ':money' do
+      expect(game_w_questions.status).to eq(:money)
+    end
+  end
+
   # Метод previous_level возвращает число, равное предыдущему уровню сложности
   context '#previous_level' do
     let(:game_w_questions) do
