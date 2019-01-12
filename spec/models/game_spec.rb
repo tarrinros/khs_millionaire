@@ -10,7 +10,7 @@ require 'support/my_spec_helper'
 # ключевая логика игры и значит работы сайта.
 RSpec.describe Game, type: :model do
   # Пользователь для создания игр
-  let(:user) {FactoryBot.create(:user)}
+  let(:user) { FactoryBot.create(:user) }
 
   # Игра с прописанными игровыми вопросами
   let(:game_w_questions) do
@@ -121,22 +121,35 @@ RSpec.describe Game, type: :model do
 
   # ДЗ 61-6 тест на возврат текущего вопроса и предыдущего уровня
   context '.current_game_question' do
-    let(:game_w_questions) do
-      FactoryBot.create :game_with_questions
-    end
-
     it 'returns current game question' do
       expect(game_w_questions.current_game_question).to eq game_w_questions.game_questions[0]
     end
   end
 
   context '.previous_level' do
-    let(:game_w_questions) do
-      FactoryBot.create :game_with_questions
-    end
-
-    it 'returns number of past level' do
+    it 'returns number of previous level' do
       expect(game_w_questions.previous_level).to eq game_w_questions.current_level - 1
+    end
+  end
+
+  # когда ответ правильный, неправильный, последний (на миллион) и когда ответ дан после истечения времени.
+  context '.answer_current_question!' do
+    context 'correct answer' do
+      let(:current_question) { game_w_questions.current_game_question }
+
+      it 'returns true if answer is correct' do
+        expect(game_w_questions.answer_current_question!(current_question.correct_answer_key)).to be_truthy
+      end
+
+      it 'saves game status to :in_progress' do
+        expect(game_w_questions.status).to eq :in_progress
+      end
+
+      it 'increases game level for 1' do
+        expect {
+          game_w_questions.answer_current_question!(current_question.correct_answer_key)
+        }.to change(game_w_questions, :current_level).by(1)
+      end
     end
   end
 end
