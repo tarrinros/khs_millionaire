@@ -164,8 +164,11 @@ RSpec.describe Game, type: :model do
       end
 
       it 'saves game status to :fail' do
+        game_w_questions.current_level = 14
         game_w_questions.answer_current_question!(wrong_answer_key)
 
+        expect(game_w_questions.current_level).to eq 14
+        expect(game_w_questions.prize).to eq game_w_questions.user.balance
         expect(game_w_questions.status).to eq :fail
       end
     end
@@ -187,10 +190,13 @@ RSpec.describe Game, type: :model do
       let(:q) { game_w_questions.current_game_question }
 
       it 'sets game status to :timeout' do
+        game_w_questions.current_level = 14
         game_w_questions.created_at = 1.hour.ago
         game_w_questions.answer_current_question!(q.correct_answer_key)
 
+        expect(game_w_questions.current_level).to eq 14
         expect(game_w_questions.is_failed).to be_truthy
+        expect(game_w_questions.prize).to eq game_w_questions.user.balance
         expect(game_w_questions.status).to eq :timeout
       end
     end
