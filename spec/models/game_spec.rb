@@ -57,7 +57,7 @@ RSpec.describe Game, type: :model do
       q = game_w_questions.current_game_question
       expect(game_w_questions.status).to eq(:in_progress)
 
-      game_w_questions.answer_current_question!(q.correct_answer_key)
+      game_w_questions.answer_current_question!('d')
 
       # Перешли на след. уровень
       expect(game_w_questions.current_level).to eq(level + 1)
@@ -73,7 +73,7 @@ RSpec.describe Game, type: :model do
     # ДЗ 61-3
     it 'take_money! finishes the game' do
       q = game_w_questions.current_game_question
-      game_w_questions.answer_current_question!(q.correct_answer_key)
+      game_w_questions.answer_current_question!('d')
 
       game_w_questions.take_money!
 
@@ -139,25 +139,25 @@ RSpec.describe Game, type: :model do
       let(:q) { game_w_questions.current_game_question }
 
       it 'returns true if answer is correct' do
-        expect(game_w_questions.answer_current_question!(q.correct_answer_key)).to be_truthy
+        expect(game_w_questions.answer_current_question!('d')).to be_truthy
       end
 
       it 'saves game status to :in_progress' do
-        game_w_questions.answer_current_question!(q.correct_answer_key)
+        game_w_questions.answer_current_question!('d')
 
         expect(game_w_questions.status).to eq :in_progress
       end
 
       it 'increases game level by 1' do
         expect {
-          game_w_questions.answer_current_question!(q.correct_answer_key)
+          game_w_questions.answer_current_question!('d')
         }.to change(game_w_questions, :current_level).by(1)
       end
     end
 
     context 'wrong answer' do
       let(:q) { game_w_questions.current_game_question }
-      let(:wrong_answer_key) { %w(a b c d).delete_if { |i| i == q.correct_answer_key }.sample }
+      let(:wrong_answer_key) { %w(a b c d).delete_if { |i| i == 'd' }.sample }
 
       it 'returns false if answer is wrong' do
         expect(game_w_questions.answer_current_question!(wrong_answer_key)).to be_falsey
@@ -178,7 +178,7 @@ RSpec.describe Game, type: :model do
 
       it 'save game status to :won and finish the game' do
         game_w_questions.current_level = 14
-        game_w_questions.answer_current_question!(q.correct_answer_key)
+        game_w_questions.answer_current_question!('d')
 
         expect(game_w_questions.current_level).to eq 15
         expect(game_w_questions.is_failed).to be_falsey
@@ -192,7 +192,7 @@ RSpec.describe Game, type: :model do
       it 'sets game status to :timeout' do
         game_w_questions.current_level = 14
         game_w_questions.created_at = 1.hour.ago
-        game_w_questions.answer_current_question!(q.correct_answer_key)
+        game_w_questions.answer_current_question!('d')
 
         expect(game_w_questions.current_level).to eq 14
         expect(game_w_questions.is_failed).to be_truthy
