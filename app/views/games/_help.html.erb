@@ -37,7 +37,7 @@
     <% end %>
   </div>
   <div class="col-sm-4">
-    <% unless game.friend_help_used? %>
+    <% unless game.friend_call_used? %>
       <%= link_to fa_icon('phone'), help_game_path(game, help_type: :friend_call), method: :put, class: 'btn btn-default btn-block btn-help' %>
     <% end %>
   </div>
