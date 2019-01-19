@@ -92,9 +92,15 @@ RSpec.describe GamesController, type: :controller do
     end
 
     # ДЗ 61-2 Пользователь забирает деньги до конца игры
-    it 'takes the money before game ends' do
+    it 'takes the money' do
+      game_w_questions.update_attribute(:current_level, 4)
+
       put :take_money, id: game_w_questions.id
       game = assigns(:game)
+      expect(game.prize).to eq(500)
+
+      user.reload # необходимо т.к. пользователь в базе изменился
+      expect(user.balance).to eq(500)
 
       expect(game.finished?).to be_truthy
       expect(response).to redirect_to(user_path(user))
