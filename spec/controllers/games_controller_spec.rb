@@ -14,7 +14,32 @@ RSpec.describe GamesController, type: :controller do
 
       expect(response.status).to_not eq 200
       expect(response).to redirect_to(new_user_session_path)
-      expect(flash[:alert]).to be
+      expect(flash[:alert]).to eq("Вам необходимо войти в систему или зарегистрироваться.")
+    end
+
+    # ДЗ 61-4 Анонимный пользователь не может вызвать методы контроллера
+    it 'kick from #create' do
+      post :create
+
+      expect(response.status).to eq 302
+      expect(response).to redirect_to(new_user_session_path)
+      expect(flash[:alert]).to eq("Вам необходимо войти в систему или зарегистрироваться.")
+    end
+
+    it 'kick from #answer' do
+      put :answer, id: game_w_questions, params: {letter: 'a'}
+
+      expect(response.status).to eq 302
+      expect(response).to redirect_to(new_user_session_path)
+      expect(flash[:alert]).to eq("Вам необходимо войти в систему или зарегистрироваться.")
+    end
+
+    it 'kick from #take_money' do
+      put :take_money, id: game_w_questions.id
+
+      expect(response.status).to eq 302
+      expect(response).to redirect_to(new_user_session_path)
+      expect(flash[:alert]).to eq("Вам необходимо войти в систему или зарегистрироваться.")
     end
   end
 
@@ -82,6 +107,17 @@ RSpec.describe GamesController, type: :controller do
       expect(game.current_level).to be > 0
       expect(response).to redirect_to(game_path(game))
       expect(flash.empty?).to be_truthy # удачный ответ не заполняет flash
+    end
+
+    # ДЗ 61-5 Игрок отвечает неправильно
+    it 'answers incorrect' do
+      # передаем параметр params[:letter]
+      put :answer, id: game_w_questions.id, letter: "c"
+      game = assigns(:game)
+
+      expect(game.finished?).to be_truthy
+      expect(response).to redirect_to(user_path(user))
+      expect(flash[:alert]).to be
     end
 
     # тест на отработку "помощи зала"
