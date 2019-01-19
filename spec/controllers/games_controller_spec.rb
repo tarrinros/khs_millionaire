@@ -50,6 +50,16 @@ RSpec.describe GamesController, type: :controller do
       expect(response).to render_template('show') # и отрендерить шаблон show
     end
 
+    it '#show another user game' do
+      another_user_game = FactoryBot.create(:game_with_questions)
+
+      get :show, id: another_user_game.id
+
+      expect(response.status).to_not eq 200
+      expect(response).to redirect_to(root_path)
+      expect(flash[:alert]).to be
+    end
+
     # юзер отвечает на игру корректно - игра продолжается
     it 'answers correct' do
       # передаем параметр params[:letter]
