@@ -39,6 +39,17 @@ RSpec.describe GamesController, type: :controller do
       expect(flash[:notice]).to be
     end
 
+    # ДЗ 61-3 пользователь не может начать 2 игры одновременно
+    it 'does not starts two games' do
+      expect(game_w_questions.finished?).to be_falsey # текущая игра не завершена
+      expect { post :create }.to change(Game, :count).by(0) # новая игра не создалась
+      game = assigns(:game)
+      expect(game).to be_nil
+
+      expect(response).to redirect_to(game_path(game_w_questions))
+      expect(flash[:alert]).to be # сообщение об ошибке
+    end
+
     # юзер видит свою игру
     it '#show game' do
       get :show, id: game_w_questions.id
