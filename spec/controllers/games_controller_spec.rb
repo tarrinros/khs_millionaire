@@ -50,8 +50,9 @@ RSpec.describe GamesController, type: :controller do
       expect(response).to render_template('show') # и отрендерить шаблон show
     end
 
-    it '#show another user game' do
-      another_user_game = FactoryBot.create(:game_with_questions)
+    # ДЗ 61-1
+    it '#show another users game' do
+      another_user_game = FactoryBot.create(:game_with_questions) # Игра с другим пользователем
 
       get :show, id: another_user_game.id
 
@@ -88,6 +89,16 @@ RSpec.describe GamesController, type: :controller do
       expect(game.current_game_question.help_hash[:audience_help]).to be
       expect(game.current_game_question.help_hash[:audience_help].keys).to contain_exactly('a', 'b', 'c', 'd')
       expect(response).to redirect_to(game_path(game))
+    end
+
+    # ДЗ 61-2 Пользователь забирает деньги до конца игры
+    it 'takes the money before game ends' do
+      put :take_money, id: game_w_questions.id
+      game = assigns(:game)
+
+      expect(game.finished?).to be_truthy
+      expect(response).to redirect_to(user_path(user))
+      expect(flash[:warning]).to be
     end
   end
 end
