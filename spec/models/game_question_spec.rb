@@ -48,8 +48,13 @@ RSpec.describe GameQuestion, type: :model do
   context 'user helpers' do
     # ДЗ 63-1 тестирование метода halp_hash
     it 'correct help_hash' do
-      expect(game_question.help_hash).to be
       expect(game_question.help_hash.class).to eq Hash
+      expect(game_question.help_hash.empty?).to be_truthy
+
+      game_question.help_hash[:audience_help] = 'varios varians'
+
+      ah = game_question.help_hash[:audience_help]
+      expect(ah).to eq 'varios varians'
     end
 
     it 'correct audience_help' do
@@ -63,6 +68,7 @@ RSpec.describe GameQuestion, type: :model do
       expect(ah.keys).to contain_exactly('a', 'b', 'c', 'd')
     end
 
+    # ДЗ 63-2 тестирование метода fifty_fifty
     it 'correct fifty_fifty' do
       expect(game_question.help_hash).not_to include(:fifty_fifty)
 
@@ -75,15 +81,19 @@ RSpec.describe GameQuestion, type: :model do
       expect(ff).to include('b')
     end
 
+    # ДЗ 63-3 тестирование метода friend_call
     it 'correct friend_call' do
       expect(game_question.help_hash).not_to include(:friend_call)
+
+      # Используем генератор, для получения строки с ответом
+      allow(GameHelpGenerator).to receive(:friend_call) {'Галадриэль считает, что это А'}
 
       game_question.add_friend_call
 
       expect(game_question.help_hash).to include(:friend_call)
 
       fc = game_question.help_hash[:friend_call]
-      expect(fc).to eq 'bla'
+      expect(fc).to eq 'Галадриэль считает, что это А'
     end
   end
 end
