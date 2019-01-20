@@ -154,7 +154,7 @@ RSpec.describe GamesController, type: :controller do
       expect(flash[:warning]).to be
     end
 
-    # ДЗ 63-5 может ли пользователь использовать подсказки
+    # ДЗ 63-4 может ли пользователь использовать подсказки
     it 'can use fifty_fifty' do
       expect(game_w_questions.fifty_fifty_used).to be_falsey
 
