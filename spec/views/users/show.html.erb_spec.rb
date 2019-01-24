@@ -12,9 +12,14 @@ RSpec.describe 'users/show', type: :view do
     render
   end
 
-  it 'checks for current user change password button' do
-    allow(:user).to receive(:current_user).and_return(:user)
+  it 'doesn`t render change password button' do
+    expect(rendered).not_to match 'Сменить имя и пароль'
+  end
+
+  it 'renders change password button for signed in user' do
+    sign_in :user
     render
+
     expect(rendered).to match 'Сменить имя и пароль'
   end
 
