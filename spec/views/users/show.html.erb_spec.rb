@@ -1,14 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe 'users/show', type: :view do
+  let(:user) { FactoryBot.create :user, name: 'Alex' }
+
   before(:each) do
     assign(:user, (FactoryBot.build_stubbed :user, name: 'Alex'))
-
     assign(:games, [
       FactoryBot.build_stubbed(
         :game, id: 13, created_at: Time.parse('2016.10.09, 13:00'), current_level: 3, prize: 1000
       )
     ])
+
     render
   end
 
@@ -17,10 +19,12 @@ RSpec.describe 'users/show', type: :view do
   end
 
   it 'renders change password button for signed in user' do
-    sign_in :user
+    stub_template 'users/show' => 'Сменить имя и пароль'
+
+    allow(view).to receive(:current_user).and_return(user)
     render
 
-    expect(rendered).to match 'Сменить имя и пароль'
+    expect(rendered).to have_content 'Сменить имя и пароль'
   end
 
   # Проверяем, что шаблон выводит имя пользователя
