@@ -5,13 +5,11 @@ RSpec.feature 'USER looks at another profile', type: :feature do
       FactoryBot.create :user, name: 'Alex', balance: 5000
   end
 
-
-  # before(:each) do
-  #   login_as user
-  # end
-
   before(:each) do
-    FactoryBot.create(:game, user_id: user.id)
+    FactoryBot.create_list(:game, 5, user_id: user.id, prize: 1000, current_level: 5, is_failed: true,
+                           created_at: Time.parse('2019-01-17 12:53:38'),
+                           updated_at: Time.parse('2019-01-17 12:53:38'),
+                           finished_at: Time.parse('2019-01-17 12:53:38'))
   end
 
   scenario 'successfully' do
@@ -19,14 +17,15 @@ RSpec.feature 'USER looks at another profile', type: :feature do
 
     click_link 'Alex'
 
-    save_and_open_page
-
-    # expect(page).to have_content 'Alex'
-  end
-
-  scenario 'successfully' do
-    visit "users/#{user.id}"
-
+    expect(page).to have_current_path '/users/1'
     expect(page).to have_content 'Alex'
+    expect(page).to have_content 'проигрыш'
+    expect(page).to have_content '1'
+    expect(page).to have_content '2'
+    expect(page).to have_content '3'
+    expect(page).to have_content '4'
+    expect(page).to have_content '5'
+    expect(page).to have_content '1 000 ₽'
+    expect(page).to have_content '17 янв., 13:53'
   end
 end
