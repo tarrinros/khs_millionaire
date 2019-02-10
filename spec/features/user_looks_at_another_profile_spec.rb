@@ -27,7 +27,5 @@ RSpec.feature 'USER looks at another profile', type: :feature do
     expect(page).to have_content '1 деньги 19 авг., 22:37 11 64 000 ₽'
     expect(page).to have_content '2 в процессе 30 сент., 22:44 5 1 000 ₽'
     expect(page).to_not have_content 'Сменить имя и пароль'
-
-    save_and_open_page
   end
 end
