@@ -97,24 +97,12 @@ class Game < ActiveRecord::Base
   #
   # help_type = :fifty_fifty | :audience_help | :friend_call
   def use_help(help_type)
-    case help_type
-    when :fifty_fifty
-      unless fifty_fifty_used
-        # ActiveRecord метод toggle! переключает булевое поле сразу в базе
-        toggle!(:fifty_fifty_used)
-        current_game_question.add_fifty_fifty
-        return true
-      end
-    when :audience_help
-      unless audience_help_used
-        toggle!(:audience_help_used)
-        current_game_question.add_audience_help
-        return true
-      end
-    when :friend_call
-      unless friend_call_used
-        toggle!(:friend_call_used)
-        current_game_question.add_friend_call
+    help_types_array = [:fifty_fifty, :audience_help, :friend_call]
+
+    if help_types_array.include?(help_type)
+      unless send("#{help_type.to_s}_used") # Формирует имя метода из строки
+        toggle!("#{help_type}_used".to_sym)
+        current_game_question.send("add_#{help_type}")
         return true
       end
     end
