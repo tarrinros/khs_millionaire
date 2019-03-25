@@ -24,7 +24,7 @@ class QuestionsController < ApplicationController
 
     # читаем содержимое файла в массив
     # http://stackoverflow.com/questions/2521053/how-to-read-a-user-uploaded-file-without-saving-it-to-the-database
-    if q_file.respond_to?(:readlines) && q_file.content_type == 'txt'
+    if q_file.respond_to?(:readlines)
       file_lines = q_file.readlines
     elsif q_file.respond_to?(:path)
       file_lines = File.readlines(q_file.path)
@@ -75,5 +75,4 @@ class QuestionsController < ApplicationController
 
     failed
   end
-
 end
