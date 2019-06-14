@@ -1,7 +1,3 @@
-#  (c) goodprogrammer.ru
-#
-# Модельи игры — создается когда пользователь начинает новую игру. Хранит и
-# обновляет состояние игры и отвечает за игровой процесс.
 class Game < ActiveRecord::Base
   PRIZES = [100, 200, 300, 500, 1_000, 2_000, 4_000, 8_000, 16_000,
             32_000, 64_000, 125_000, 250_000, 500_000, 1_000_000].freeze
@@ -83,24 +79,11 @@ class Game < ActiveRecord::Base
     finish_game!(previous_level > -1 ? PRIZES[previous_level] : 0, false)
   end
 
-  # TODO: Дорогой ученик!
-  #
-  # Код метода ниже можно сократиь в 3 раза с помощью возможностей Ruby и Rails,
-  # подумайте как и реализуйте. Помните о безопасности и входных данных!
-  #
-  # Вариант решения вы найдете в комментарии в конце файла, отвечающего за настройки
-  # хранения сессий вашего приложения. Вот такой вот вам ребус :)
-  #
-  # Создает варианты подсказок для текущего игрового вопроса.
-  # Возвращает true, если подсказка применилась успешно,
-  # false если подсказка уже заюзана.
-  #
-  # help_type = :fifty_fifty | :audience_help | :friend_call
   def use_help(help_type)
     help_types_array = [:fifty_fifty, :audience_help, :friend_call]
 
     if help_types_array.include?(help_type)
-      unless send("#{help_type.to_s}_used") # Формирует имя метода из строки
+      unless send("#{help_type.to_s}_used") # Creates method from the string
         toggle!("#{help_type}_used".to_sym)
         current_game_question.send("add_#{help_type}")
         return true

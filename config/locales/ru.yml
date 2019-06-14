@@ -23,6 +23,10 @@ ru:
       good_answer: "Правильный ответ, молодцом :)"
       bad_answer: "Правильный ответ: %{answer}. Игра закончена, ваш приз %{prize}"
 
+  app:
+    name: 'Кто хочет стать миллионером?'
+    company: 'Alexander Smirnov'
+
 # статусы игры
   game_statuses:
     fail: 'проигрыш'

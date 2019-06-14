@@ -27,12 +27,10 @@ RSpec.describe 'users/show', type: :view do
     expect(rendered).to have_content 'Сменить имя и пароль'
   end
 
-  # Проверяем, что шаблон выводит имя пользователя
   it 'renders users name' do
     expect(rendered).to match 'Alex'
   end
 
-  # Проверяем, что шаблон выводит данные об игре
   it 'renders games list' do
     expect(rendered).to match 'в процессе'
     expect(rendered).to match '09 окт., 13:00'

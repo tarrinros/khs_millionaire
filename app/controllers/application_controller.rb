@@ -15,8 +15,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  # Болванка новой игры для кнопки «Начать игру», доступной на любой странице
-  # сайта.
+  # 'Start game' button
   def set_new_game
     @new_game ||= Game.new
   end

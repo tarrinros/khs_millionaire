@@ -1,13 +1,6 @@
 require 'rails_helper'
 
-# Тестовый сценарий для модели Вопрос
-#
-# Вопрос не содержит функционала (это просто хранилище данных), поэтому все
-# тесты сводятся только к проверке наличия нужных валидаций.
-#
-# Обратите внимание, что работу самих валидаций не надо тестировать (это работа
-# авторов rails). Смысл именно в проверке _наличия_ у модели конкретных
-# валидаций.
+# test presence of validation not the validations work
 RSpec.describe Question, type: :model do
   context 'validations check' do
     it { should validate_presence_of :level }

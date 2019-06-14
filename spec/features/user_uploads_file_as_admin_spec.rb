@@ -36,6 +36,5 @@ RSpec.feature 'USER uploads file as admin', type: :feature do
     click_button 'Save changes'
 
     expect(page).to have_current_path '/questions/new'
-    # expect(page).to have_content 'Уровень 7, обработано 477, создано 474, время 02.000 сек'
   end
 end

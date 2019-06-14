@@ -1,16 +1,9 @@
 require 'rails_helper'
 
-# Тестовый сценарий для модели игрового вопроса,
-# в идеале весь наш функционал (все методы) должны быть протестированы.
 RSpec.describe GameQuestion, type: :model do
-
-  # задаем локальную переменную game_question, доступную во всех тестах этого сценария
-  # она будет создана на фабрике заново для каждого блока it, где она вызывается
   let(:game_question) { FactoryBot.create(:game_question, a: 2, b: 1, c: 4, d: 3) }
 
-  # группа тестов на игровое состояние объекта вопроса
   context 'game status' do
-    # тест на правильную генерацию хэша с вариантами
     it 'correct .variants' do
       expect(game_question.variants).to eq({'a' => game_question.question.answer2,
                                             'b' => game_question.question.answer1,
@@ -19,11 +12,9 @@ RSpec.describe GameQuestion, type: :model do
     end
 
     it 'correct .answer_correct?' do
-      # именно под буквой b в тесте мы спрятали указатель на верный ответ
       expect(game_question.answer_correct?('b')).to be_truthy
     end
 
-    # ДЗ 61-2 тест на правильное делегирование метода .text и .level
     it 'correct .text' do
       expect(game_question.text).to eq game_question.question.text
     end
@@ -32,21 +23,12 @@ RSpec.describe GameQuestion, type: :model do
       expect(game_question.level).to eq game_question.question.level
     end
 
-    # ДЗ 61-5
     it 'correct .correct_answer_key' do
       expect(game_question.correct_answer_key).to eq 'b'
     end
   end
 
-  # help_hash у нас имеет такой формат:
-  # {
-  #   fifty_fifty: ['a', 'b'], # При использовании подсказски остались варианты a и b
-  #   audience_help: {'a' => 42, 'c' => 37 ...}, # Распределение голосов по вариантам a, b, c, d
-  #   friend_call: 'Василий Петрович считает, что правильный ответ A'
-  # }
-
   context 'user helpers' do
-    # ДЗ 63-1 тестирование метода halp_hash
     it 'correct help_hash' do
       expect(game_question.help_hash.class).to eq Hash
       expect(game_question.help_hash.empty?).to be_truthy
@@ -68,7 +50,6 @@ RSpec.describe GameQuestion, type: :model do
       expect(ah.keys).to contain_exactly('a', 'b', 'c', 'd')
     end
 
-    # ДЗ 63-2 тестирование метода fifty_fifty
     it 'correct fifty_fifty' do
       expect(game_question.help_hash).not_to include(:fifty_fifty)
 
@@ -81,11 +62,9 @@ RSpec.describe GameQuestion, type: :model do
       expect(ff).to include('b')
     end
 
-    # ДЗ 63-3 тестирование метода friend_call
     it 'correct friend_call' do
       expect(game_question.help_hash).not_to include(:friend_call)
 
-      # Используем генератор, для получения строки с ответом
       allow(GameHelpGenerator).to receive(:friend_call) {'Галадриэль считает, что это А'}
 
       game_question.add_friend_call

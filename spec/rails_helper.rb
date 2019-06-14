@@ -71,5 +71,5 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 end
 
-# Это нужно, чтобы капибара искала стили и js в правильном месте
+# Helps capybara search styles in correct place
 Capybara.asset_host = "http://localhost:3000"

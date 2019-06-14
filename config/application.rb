@@ -15,7 +15,7 @@ module Billionaire
     config.i18n.locale = :ru
     config.i18n.fallbacks = [:en]
 
-    config.time_zone = 'Riga'
+    config.time_zone = 'Moscow'
 
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
